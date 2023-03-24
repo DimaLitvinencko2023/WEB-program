@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Lab3</title>
+</head>
+<body>
+    <form>
+        <table border="1" align="center" width="70%">
+            <thead>
+                <tr align="center">
+                    <th colspan="2"><h1><i><font color="#CF8B1F">Ваша Кава</font> - обираємо найулюбленішу каву року</i></h1></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td width="35%">Введіть пошту для зворотнього зв'язку:</td>
+                    <td><input type="text" placeholder="+380934567890" required /></td>
+                </tr>
+                <tr>
+                    <td width="35%"><i>Оберіть найулюбленішу каву:</i></td>
+                    <td>
+                        <input type="radio" name="favorite coffee" required>Латте<br>
+                        <input type="radio" name="favorite coffee" required>Амерікано<br>
+                        <input type="radio" name="favorite coffee" required>Капучіно<br>
+                        <input type="radio" name="favorite coffee" required>Арабіка<br>
+                        <input type="radio" name="favorite coffee" required>Фраппе<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="35%"><i>Скільки чарок кави п'єте за тиждень?</i></td>
+                    <td>
+                        <select required>
+                            <option><= 1</option>
+                            <option>2-3</option>
+                            <option>4-5</option>
+                            <option>6-7</option>
+                            <option>>= 7</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="35%"><i>Обери тепер, яка кава ще подобається, вже окрім найулюбленішої:</i></td>
+                    <td>
+                        <input type="checkbox" name="favorite coffee N2" required>Латте<br>
+                        <input type="checkbox" name="favorite coffee N2" required>Амерікано<br>
+                        <input type="checkbox" name="favorite coffee N2" required>Капучіно<br>
+                        <input type="checkbox" name="favorite coffee N2" required>Арабіка<br>
+                        <input type="checkbox" name="favorite coffee N2" required>Фраппе<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="35%"><i>Опиши свою ідеальну каву:</i></td>
+                    <td>
+                        <textarea placeholder="Зернова кава, арабіка, у якій більше половини чарки молока та 3 чайні ложки цукру :)"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Відправити!">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="reset" value="Очистити відповідь"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</body>
+</html>
