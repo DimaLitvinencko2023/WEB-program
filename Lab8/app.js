@@ -6,7 +6,8 @@ class Employee {
         this.surname = surname;
         this.basicSalary = basicSalary;
         this.experience = experience;
-
+    }
+    GetCountSalary() {
         if (this.experienceInYears >= 2 && this.experienceInYears < 5) {
             this.countedSalary = this.basicSalary + 200;
         }
@@ -16,6 +17,7 @@ class Employee {
         else {
             this.countedSalary = this.basicSalary;
         }
+        return this.countedSalary;
     }
 }
 class Developer extends Employee {
@@ -36,13 +38,22 @@ class Designer extends Employee {
         else {
             this.productivityCoefficient = productivityCoefficient;
         }
+    }
+    GetCountSalary() {
+        super.GetCountSalary();
         this.countedSalary *= this.productivityCoefficient;
+
+        return this.countedSalary;
     }
 }
 class Manager extends Employee {
     constructor(name, surname, basicSalary, experience, team) {
         super(name, surname, basicSalary, experience);
         this.team = team;
+    }
+    GetCountSalary() {
+        super.GetCountSalary();
+
         if (this.team.length > 5 && this.team.length < 10) {
             this.countedSalary += 200;
         }
@@ -60,6 +71,8 @@ class Manager extends Employee {
         if (coefficient > 0.5) {
             this.countedSalary += this.countedSalary * 0.1;
         }
+
+        return this.countedSalary;
     }
 }
 class Department {
@@ -68,9 +81,9 @@ class Department {
     }
     giveSalary() {
         for (let i = 0; i < managers.length; i++) {
-            console.log(managers[i].name + " " + managers[i].surname + " отримав " + managers[i].countedSalary + "$.");
+            console.log(managers[i].name + " " + managers[i].surname + " отримав " + managers[i].GetCountSalary() + "$.");
             for (let j = 0; j < managers[i].team.length; j++) {
-                console.log(managers[i].team[j].name + " " + managers[i].team[j].surname + " отримав " + managers[i].team[j].countedSalary + "$.");
+                console.log(managers[i].team[j].name + " " + managers[i].team[j].surname + " отримав " + managers[i].team[j].GetCountSalary() + "$.");
             }
         }
     }
