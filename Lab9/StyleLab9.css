@@ -1,0 +1,116 @@
+﻿body {
+    background: #1D1D1D;
+}
+
+/*containers*/
+#main-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    left: 28vw;
+    justify-content: center;
+    position: absolute;
+    width: 44vw;
+}
+
+.dog-container {
+    background: #36363D;
+    border-radius: 0.5em;
+    cursor: pointer;
+    display: flex;
+    height: 15vh;
+    justify-content: center;
+    margin-top: 1.5em;
+    width: 100%;
+}
+
+    .dog-container :active {
+        background-color: #2E2E33;
+    }
+    .dog-container .img {
+        flex-basis: 20%;
+    }
+    .dog-container .name-and-sex-info {
+        flex-basis: 80%;
+    }
+
+.modal-window {
+    background-color: rgba(0, 0, 8, 0.4);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.modal-window-content {
+    background-color: #121212;
+    border-radius: 2em;
+    color: #ffffff;
+    height: auto;
+    margin: 40px auto;
+    max-width: 25vw;
+    padding: 25px;
+    width: 25vw;
+}
+
+/*images*/
+.icon {
+    border-radius: 1em;
+    height: 85%;
+}
+
+.img-centring {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.window-img-size {
+    border-radius: 1.5em;
+    height: 40vh;
+    width: 40vh;
+}
+
+/*text*/
+.name-and-sex-info {
+    color: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.name {
+    color: #F7F7F7;
+    font-size: 2.3em;
+    font-weight: bold;
+    padding-left: 4vw;
+}
+
+.signature-text {
+    color: #F7F7F7;
+    font-size: 12px;
+}
+
+.main-window-text {
+    font-size: 18px;
+    margin-top: 8px;
+    word-wrap: break-word;
+}
+
+#dog-name {
+    font-size: 45px;
+    font-weight: bold;
+    padding-top: 7%;
+}
+
+.sex {
+    padding-left: 12%;
+}
+
+.window-hr {
+    background-color: #332F2E;
+    border: none;
+    height: 2px;
+}
